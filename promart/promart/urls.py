@@ -80,9 +80,12 @@ urlpatterns = [
         "api/token/verify/", 
         TokenVerifyView.as_view(), 
         name="token_verify"
-    )
+    ),
 
     # API paths
+    path(
+        "api/v1/", include("users.urls")
+    ),
     
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

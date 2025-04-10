@@ -13,6 +13,9 @@ elasticsearch = "*"
 django-elasticsearch-dsl = "*"
 djangorestframework = "*"
 psycopg2-binary = "*"
+djangorestframework-simplejwt = "*"
+drf-yasg = "*"
+psycopg = "*"
 
 [dev-packages]
 pytest = "*"

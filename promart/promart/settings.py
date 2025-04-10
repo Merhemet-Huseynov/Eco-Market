@@ -161,10 +161,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "users.CustomUser"
 
 # Used as a Redis-in broker
-CELERY_BROKER_URL = "redis://localhost:6379/0"
+# CELERY_BROKER_URL = "redis://localhost:6379/0"
 
-# As a result, Redis is used as the backend
-CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
+# # As a result, Redis is used as the backend
+# CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
+
+CELERY_BROKER_URL = 'redis://eco-market-main-redis-1:6379/0'
+CELERY_RESULT_BACKEND = 'redis://eco-market-main-redis-1:6379/0'
+
 
 # Serialization format of tasks (optional)
 CELERY_ACCEPT_CONTENT = ["json"]
